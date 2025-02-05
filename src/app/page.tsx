@@ -1,5 +1,3 @@
-import Image from "next/image";
-
 export default function Home() {
-  return <div className="">Main Page</div>;
+  return <div className="bg-red-600 dark:bg-yellow-500">Main Page</div>;
 }
