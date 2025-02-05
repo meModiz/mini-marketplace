@@ -8,7 +8,17 @@ import lightModeIcon from "@/../public/light_mode.svg";
 import Image from "next/image";
 
 export default function ThemeToggle() {
-  const [theme, setTheme] = useState(localStorage.theme);
+  const [theme, setTheme] = useState<string | null>(null);
+
+  useEffect(() => {
+    const isDarkMode = document.documentElement.classList.toggle(
+      "dark",
+      localStorage.theme === "dark" ||
+        (!("theme" in localStorage) &&
+          window.matchMedia("(prefers-color-scheme: dark)").matches)
+    );
+    setTheme(isDarkMode ? "dark" : "light");
+  }, []);
 
   function toggleTheme() {
     const newTheme = theme === "light" ? "dark" : "light";
@@ -18,15 +28,6 @@ export default function ThemeToggle() {
     document.documentElement.classList.remove("light", "dark");
     document.documentElement.classList.add(newTheme);
   }
-
-  useEffect(() => {
-    document.documentElement.classList.toggle(
-      "dark",
-      localStorage.theme === "dark" ||
-        (!("theme" in localStorage) &&
-          window.matchMedia("(prefers-color-scheme: dark)").matches)
-    );
-  }, []);
 
   return (
     <div>
