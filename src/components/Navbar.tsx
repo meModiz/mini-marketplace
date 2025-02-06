@@ -1,14 +1,14 @@
 // Navigation bar component
 
 import Link from "next/link";
-import ThemeToggle from "@/app/utils/ThemeToggler";
+import ThemeToggle from "@/components/ThemeToggler";
 
 export default function Navbar() {
   return (
     <div className="flex flex-row w-full justify-between items-center">
       <span>COMPANY LOGO</span>
       <nav className="p-4">
-        <ul className="flex gap-4">
+        <ul className="flex gap-4 text-sm font-medium text-gray-700 dark:text-gray-200">
           <li>
             <Link href="/">Home</Link>
           </li>
