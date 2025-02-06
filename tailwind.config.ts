@@ -9,9 +9,22 @@ export default {
   darkMode: "selector",
   theme: {
     extend: {
-      colors: {
-        background: "#fff",
-        backgroundDark: "#181D25",
+      colors: {},
+      spacing: {
+        "204": "51rem",
+        "49": "12.25rem",
+        "44.5": "11.125rem",
+        "32.5": "8.125rem",
+        "18": "4.5rem",
+      },
+      fontSize: {
+        D3: [
+          "4rem",
+          {
+            lineHeight: "4.75rem",
+            fontWeight: "700",
+          },
+        ],
       },
       backgroundImage: {
         lightGradient: "linear-gradient(to right, #CBC9E9, #E3E8FB, #FFE0F4)",

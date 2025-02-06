@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "label": "Smartphones & Tablets",
+    "name": "smartphones_tablets"
+  },
+  {
+    "id": 2,
+    "label": "Laptops & Computers",
+    "name": "laptops_computers"
+  },
+  {
+    "id": 3,
+    "label": "Gaming Consoles & Accessories",
+    "name": "gaming_devices"
+  },
+  {
+    "id": 4,
+    "label": "Audio & Headphones",
+    "name": "audio_devices"
+  },
+  {
+    "id": 5,
+    "label": "Cameras, Drones & Accessories",
+    "name": "video_devices"
+  },
+  {
+    "id": 6,
+    "label": "Smart Home & Wearables",
+    "name": "smart_home_devices"
+  }
+]
