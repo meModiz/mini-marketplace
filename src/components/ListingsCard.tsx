@@ -1,0 +1,13 @@
+import Image from "next/image";
+export default function TrendingListingCard() {
+  return (
+    <div className="flex flex-col w-76.5 h-76 bg-transparent transform transition-transform duration-300 hover:scale-105 border-2 border-gray-200">
+      <div className="w-full h-56 overflow-hidden rounded-t-xl">
+        <Image alt={""} src={""} width={196} height={130} />
+      </div>
+      <div className="text-sm font-medium text-gray-900 bg-white dark:bg-white/10 dark:text-white flex-1 flex items-center justify-center text-center w-full rounded-b-xl">
+        {}
+      </div>
+    </div>
+  );
+}
