@@ -1,4 +1,4 @@
 export type Category = {
-  categoryName: string;
-  categoryLabel: string;
+  name: string;
+  label: string;
 };

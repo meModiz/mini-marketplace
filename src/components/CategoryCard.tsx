@@ -2,10 +2,7 @@ import { Category } from "@/types/category";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
 
-export default function CategoryCard({
-  categoryName,
-  categoryLabel,
-}: Category) {
+export default function CategoryCard({ name, label }: Category) {
   const router = useRouter();
   return (
     <div
@@ -13,15 +10,10 @@ export default function CategoryCard({
       onClick={() => router.push("/marketplace")} // Make routing with filtration into marketplace
     >
       <div className="w-full h-32.5 overflow-hidden rounded-t-xl">
-        <Image
-          alt={categoryLabel}
-          src={`/${categoryName}.webp`}
-          width={196}
-          height={130}
-        />
+        <Image alt={label} src={`/${name}.webp`} width={196} height={130} />
       </div>
       <div className="text-sm font-medium text-gray-900 bg-white dark:bg-white/10 dark:text-white flex-1 flex items-center justify-center text-center w-full rounded-b-xl">
-        {categoryLabel}
+        {label}
       </div>
     </div>
   );

@@ -6,8 +6,8 @@ export default function CategoryList() {
       {categories.map((category) => (
         <CategoryCard
           key={category.name}
-          categoryName={category.name}
-          categoryLabel={category.label}
+          name={category.name}
+          label={category.label}
         />
       ))}
     </div>
