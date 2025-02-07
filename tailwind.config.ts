@@ -9,7 +9,13 @@ export default {
   darkMode: "selector",
   theme: {
     extend: {
-      colors: {},
+      colors: {
+        gray: {
+          600: "#4E5562",
+          700: "#333D4C",
+          900: "#181D25",
+        },
+      },
       spacing: {
         "204": "51rem",
         "49": "12.25rem",
@@ -23,6 +29,13 @@ export default {
           {
             lineHeight: "4.75rem",
             fontWeight: "700",
+          },
+        ],
+        H3: [
+          "1.75rem",
+          {
+            lineHeight: "2.25rem",
+            fontWeight: "600",
           },
         ],
       },

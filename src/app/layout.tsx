@@ -15,7 +15,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`antialiased w-screen h-fit bg-lightGradient dark:bg-darkGradient text-black dark:text-white px-80 py-3`}
+        className={`antialiased w-screen h-fit bg-lightGradient dark:bg-darkGradient text-black dark:text-white`}
       >
         <Navbar />
         {children}
