@@ -33,6 +33,7 @@ function TextContainer() {
             width={22}
             height={22}
             className="rounded-full"
+            style={{ width: "auto", height: "auto" }} // ✅ Fixes warning
           />
           Super Seller
         </p>
