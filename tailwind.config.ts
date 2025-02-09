@@ -11,6 +11,10 @@ export default {
     extend: {
       colors: {
         gray: {
+          200: "#E0E5EB",
+          300: "#CAD0D9",
+          400: "#9CA3AF",
+          500: "#6C727F",
           600: "#4E5562",
           700: "#333D4C",
           900: "#181D25",
@@ -23,7 +27,6 @@ export default {
         "32.5": "8.125rem",
         "18": "4.5rem",
         "76.5": "19.125rem",
-        "76": "19rem",
       },
       fontSize: {
         D3: [
@@ -37,6 +40,13 @@ export default {
           "1.75rem",
           {
             lineHeight: "2.25rem",
+            fontWeight: "600",
+          },
+        ],
+        H6: [
+          "1rem",
+          {
+            lineHeight: "1.5rem",
             fontWeight: "600",
           },
         ],

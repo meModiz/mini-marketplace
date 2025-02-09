@@ -16,10 +16,11 @@ export default function Home() {
         <HeaderText />
         <CategoryList />
       </div>
-      <div className="bg-white dark:bg-gray-900 h-204 py-28 px-80">
+      <div className="flex flex-col bg-white dark:bg-gray-900 h-204 py-28 px-80 gap-10">
         <h2 className="text-H3 text-gray-900 dark:text-white">
           Explore trending listings
         </h2>
+        <TrendingListingCard />
       </div>
     </div>
   );
