@@ -4,11 +4,6 @@ import CategoryList from "@/components/CategoryList";
 import HeaderText from "@/components/HeaderText";
 import TrendingListingCard from "@/components/ListingsCard";
 
-type Category = {
-  categoryName: string;
-  categoryLabel: string;
-};
-
 export default function Home() {
   return (
     <div className="flex flex-col h-full">
