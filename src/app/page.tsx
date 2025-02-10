@@ -2,7 +2,7 @@
 
 import CategoryList from "@/components/CategoryList";
 import HeaderText from "@/components/HeaderText";
-import TrendingListingCard from "@/components/ListingsCard";
+import TrendingListingCard from "@/components/Cards/ListingsCard";
 
 export default function Home() {
   return (

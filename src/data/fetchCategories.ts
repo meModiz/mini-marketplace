@@ -1,8 +1,8 @@
+"use server";
 import { collection, getDocs } from "firebase/firestore";
 import { db } from "@/app/firebase";
-import { Category } from "@/types/category";
 
-export default async function GetCategories(): Promise<Category[]> {
+export default async function GetCategories() {
   const querySnapshot = await getDocs(collection(db, "categories"));
 
   const categories = querySnapshot.docs.map((doc) => ({

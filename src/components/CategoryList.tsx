@@ -1,7 +1,6 @@
-import CategoryCard from "@/components/CategoryCard";
+import CategoryCard from "@/components/Cards/CategoryCard";
 import { useEffect, useState } from "react";
 import fetchCategories from "@/data/fetchCategories";
-import categories from "@/data/categories.json";
 import { Category } from "@/types/category";
 
 export default function CategoryList() {
