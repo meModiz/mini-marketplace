@@ -1,12 +1,20 @@
 // Navigation bar component
-
+"use client";
 import Link from "next/link";
 import ThemeToggle from "@/components/ThemeToggler";
+import Authentication from "@/components/Authentication";
+import { usePathname } from "next/navigation";
+import Logo from "./Logo";
 
 export default function Navbar() {
+  const pathname = usePathname();
+
+  if (pathname == "/login") {
+    return null;
+  }
   return (
     <div className="flex flex-row w-full justify-between items-center px-80 py-3">
-      <span>COMPANY LOGO</span>
+      <Logo />
       <nav className="p-4">
         <ul className="flex gap-4 text-sm font-medium text-gray-700 dark:text-gray-200">
           <li>
@@ -20,7 +28,10 @@ export default function Navbar() {
           </li>
         </ul>
       </nav>
-      <ThemeToggle />
+      <div className="flex flex-row items-center gap-2">
+        <Authentication />
+        <ThemeToggle />
+      </div>
     </div>
   );
 }
