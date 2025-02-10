@@ -10,6 +10,7 @@ export default {
   theme: {
     extend: {
       colors: {
+        ButtonMain: "#F55266",
         gray: {
           200: "#E0E5EB",
           300: "#CAD0D9",
@@ -35,6 +36,14 @@ export default {
             fontWeight: "700",
           },
         ],
+        H2: [
+          "2rem",
+          {
+            lineHeight: "2.625rem",
+            fontWeight: "700",
+          },
+        ],
+
         H3: [
           "1.75rem",
           {

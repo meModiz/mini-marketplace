@@ -2,14 +2,14 @@
 "use client";
 import Link from "next/link";
 import ThemeToggle from "@/components/ThemeToggler";
-import Authentication from "@/components/Authentication";
+import Authentication from "@/components/AuthenticationIcon";
 import { usePathname } from "next/navigation";
 import Logo from "./Logo";
 
 export default function Navbar() {
   const pathname = usePathname();
 
-  if (pathname == "/login") {
+  if (pathname == "/signin" || pathname == "/signup") {
     return null;
   }
   return (
