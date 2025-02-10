@@ -9,13 +9,13 @@ import { getAuth } from "firebase/auth";
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-  apiKey: "AIzaSyDLFftRtlv2A_xCFZbX3FVLMZK-o8yxCdk",
-  authDomain: "mini-marketplace-a9780.firebaseapp.com",
-  projectId: "mini-marketplace-a9780",
-  storageBucket: "mini-marketplace-a9780.firebasestorage.app",
-  messagingSenderId: "958765830003",
-  appId: "1:958765830003:web:fdb8180fddb5e944417f06",
-  measurementId: "G-N6DS5QBT8Z",
+  apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
+  authDomain: process.env.NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN,
+  projectId: process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID,
+  storageBucket: process.env.NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: process.env.NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID,
+  appId: process.env.NEXT_PUBLIC_FIREBASE_APP_ID,
+  measurementId: process.env.NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID,
 };
 
 // Initialize Firebase
