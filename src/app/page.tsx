@@ -1,7 +1,7 @@
 "use client";
 
 import CategoryList from "@/components/CategoryList";
-import HeaderText from "@/components/HeaderText";
+import HeaderText from "@/components/Miscs/HeaderText";
 import TrendingListingCard from "@/components/Cards/ListingsCard";
 
 export default function Home() {
