@@ -24,7 +24,7 @@ export default function SignIn() {
   }
 
   return (
-    <div className="w-screen h-screen bg-white flex flex-row">
+    <div className="w-screen h-screen bg-white dark:bg-gray-900 flex flex-row">
       <div className="flex flex-col p-8 items-center justify-center w-1/2">
         <div className="flex flex-col items-start justify-between h-full">
           <Logo />
@@ -38,17 +38,17 @@ export default function SignIn() {
             <input
               name="emailInput"
               placeholder="Email"
-              className="border border-gray-300 w-96 text-base text-gray-400 pl-4 py-3 rounded-lg focus:outline-none"
+              className="border border-gray-300 dark:border-gray-600 w-96 text-base text-gray-400 dark:text-gray-500 pl-4 py-3 rounded-lg focus:outline-none bg-transparent"
               onChange={(e) => setEmail(e.target.value)}
             />
             <input
               type="password"
               name="passwordInput"
               placeholder="Password"
-              className="border border-gray-300 w-96 text-base text-gray-400 pl-4 py-3 rounded-lg focus:outline-none"
+              className="border border-gray-300 dark:border-gray-600 w-96 text-base text-gray-400 dark:text-gray-500 pl-4 py-3 rounded-lg focus:outline-none bg-transparent"
               onChange={(e) => setPassword(e.target.value)}
             />
-            <div className="text-sm text-gray-700 text-right font-medium">
+            <div className="text-sm text-gray-700 dark:text-gray-200 text-right font-medium">
               Forgot password?
             </div>
             <div
