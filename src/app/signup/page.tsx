@@ -1,25 +1,27 @@
 "use client";
 import { FooterAuth, AuthHeadings } from "@/components/AuthComponents";
-import Logo from "@/components/Logo";
+import Logo from "@/components/Miscs/Logo";
 import Image from "next/image";
 import { auth } from "@/app/firebase";
-import { createUserWithEmailAndPassword } from "firebase/auth";
+import {
+  createUserWithEmailAndPassword,
+  validatePassword,
+} from "firebase/auth";
 import { useState } from "react";
 
 export default function SignIn() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [error, setError] = useState("");
 
   async function handleRegistration() {
     createUserWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
         const user = userCredential.user;
-        console.log(user);
       })
       .catch((error) => {
-        const errorCode = error.code;
         const errorMessage = error.message;
-        console.error("Error:", errorCode, errorMessage);
+        setError(errorMessage);
       });
   }
 
@@ -54,6 +56,9 @@ export default function SignIn() {
             >
               Sign up
             </div>
+            {error && (
+              <div className="text-sm text-red-600 max-w-80">{error}</div>
+            )}
           </div>
           <FooterAuth
             text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam

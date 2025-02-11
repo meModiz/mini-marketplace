@@ -1,6 +1,6 @@
 "use client";
 import { AuthHeadings, FooterAuth } from "@/components/AuthComponents";
-import Logo from "@/components/Logo";
+import Logo from "@/components/Miscs/Logo";
 import Image from "next/image";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from "@/app/firebase";
@@ -9,6 +9,7 @@ import { useState } from "react";
 export default function SignIn() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [error, setError] = useState("");
 
   async function handleLogin() {
     signInWithEmailAndPassword(auth, email, password)
@@ -17,9 +18,8 @@ export default function SignIn() {
         console.log(user);
       })
       .catch((error) => {
-        const errorCode = error.code;
         const errorMessage = error.message;
-        console.error("Error:", errorCode, errorMessage);
+        setError(errorMessage);
       });
   }
 
@@ -57,6 +57,9 @@ export default function SignIn() {
             >
               Sign In
             </div>
+            {error && (
+              <div className="text-sm text-red-600 max-w-80">{error}</div>
+            )}
           </div>
           <FooterAuth
             text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
