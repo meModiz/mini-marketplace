@@ -7,6 +7,7 @@ export const themeContext = createContext({
 });
 
 export default function ThemeProvider({ children }: { children: any }) {
+  // Sometimes happens react hydration, idk how to fix that tbh =(
   const [theme, setTheme] = useState<string>("light");
   useEffect(() => {
     const isDarkMode = document.documentElement.classList.toggle(
