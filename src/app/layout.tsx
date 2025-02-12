@@ -3,6 +3,7 @@ import "./globals.css";
 import Navbar from "../components/NavigationBar/Navbar";
 import React from "react";
 import ThemeProvider from "@/utils/ThemeProvider";
+import BackgroundProvider from "@/components/BackgroundProvider";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -18,10 +19,12 @@ export default function RootLayout({
     <html lang="en">
       <ThemeProvider>
         <body
-          className={`antialiased min-w-screen h-fit bg-lightGradient dark:bg-darkGradient text-black dark:text-white`}
+          className={`antialiased min-w-screen h-fit text-black dark:text-white`}
         >
-          <Navbar />
-          {children}
+          <BackgroundProvider>
+            <Navbar />
+            {children}
+          </BackgroundProvider>
         </body>
       </ThemeProvider>
     </html>
