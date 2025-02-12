@@ -5,17 +5,18 @@ import Image from "next/image";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from "@/app/firebase";
 import { useState } from "react";
+import { useRouter } from "next/navigation";
 
 export default function SignIn() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
-
+  const router = useRouter();
   async function handleLogin() {
     signInWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
         const user = userCredential.user;
-        console.log(user);
+        router.push("/marketplace", { scroll: false });
       })
       .catch((error) => {
         const errorMessage = error.message;
@@ -24,7 +25,7 @@ export default function SignIn() {
   }
 
   return (
-    <div className="w-screen h-screen bg-white dark:bg-gray-900 flex flex-row">
+    <div className="w-screen h-screen dark:bg-gray-900 flex flex-row">
       <div className="flex flex-col p-8 items-center justify-center w-1/2">
         <div className="flex flex-col items-start justify-between h-full">
           <Logo />

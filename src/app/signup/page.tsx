@@ -3,21 +3,28 @@ import { FooterAuth, AuthHeadings } from "@/components/AuthComponents";
 import Logo from "@/components/Miscs/Logo";
 import Image from "next/image";
 import { auth } from "@/app/firebase";
-import {
-  createUserWithEmailAndPassword,
-  validatePassword,
-} from "firebase/auth";
+import { createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
 import { useState } from "react";
+import { useRouter } from "next/navigation";
 
 export default function SignIn() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
+  const router = useRouter();
 
   async function handleRegistration() {
     createUserWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
         const user = userCredential.user;
+        if (auth.currentUser !== null) {
+          const username = email.split("@")[0];
+          updateProfile(auth.currentUser, {
+            displayName: username,
+            photoURL: "https://example.com/jane-q-user/profile.jpg",
+          });
+        }
+        router.push("/marketplace", { scroll: false });
       })
       .catch((error) => {
         const errorMessage = error.message;
@@ -26,7 +33,7 @@ export default function SignIn() {
   }
 
   return (
-    <div className="w-screen h-screen bg-white flex flex-row">
+    <div className="w-screen h-screen flex flex-row">
       <div className="flex flex-col p-8 items-center justify-center w-1/2">
         <div className="flex flex-col items-start justify-between h-full">
           <Logo />
