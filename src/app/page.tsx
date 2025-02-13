@@ -15,7 +15,6 @@ export default function Home() {
         <h2 className="text-H3 text-gray-900 dark:text-white">
           Explore trending listings
         </h2>
-        <TrendingListingCard />
       </div>
     </div>
   );

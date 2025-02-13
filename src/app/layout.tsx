@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Navbar from "../components/NavigationBar/Navbar";
 import React from "react";
-import ThemeProvider from "@/utils/ThemeProvider";
+import ThemeProvider from "@/components/ThemeProvider";
 import BackgroundProvider from "@/components/BackgroundProvider";
 
 export const metadata: Metadata = {

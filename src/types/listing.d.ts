@@ -1,6 +1,7 @@
 export type Listing = {
-  id: number;
-  label: string;
+  id: string;
+  name: string;
   price: number;
-  seller: number;
+  images: string[];
+  sellerUID: string;
 };

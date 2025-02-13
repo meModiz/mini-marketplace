@@ -1,7 +1,7 @@
 import authenticationLight from "@/../public/authenticationLight.svg";
 import authenticationDark from "@/../public/authenticationDark.svg";
 import Image from "next/image";
-import { themeContext } from "@/utils/ThemeProvider";
+import { themeContext } from "@/components/ThemeProvider";
 import { useContext, useState } from "react";
 import Link from "next/link";
 import { getAuth, onAuthStateChanged } from "firebase/auth";
@@ -15,8 +15,6 @@ export default function Authentication() {
       setLogged(true);
     } else {
       setLogged(false);
-      // User is signed out
-      // ...
     }
   });
   return (
