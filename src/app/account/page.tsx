@@ -4,6 +4,7 @@ import ImageUploader from "@/components/AvatarImageUploader";
 import {
   onAuthStateChanged,
   sendEmailVerification,
+  signOut,
   updateEmail,
   updateProfile,
 } from "firebase/auth";
@@ -66,6 +67,16 @@ export default function AccountPage() {
     updateEmail(auth.currentUser, email);
   }
 
+  function SignOutUser() {
+    signOut(auth)
+      .then(() => {
+        router.push("/signin");
+      })
+      .catch((error) => {
+        // An error happened.
+      });
+  }
+
   function SendVerificationEmail() {
     if (auth.currentUser === null) {
       return;
@@ -78,11 +89,11 @@ export default function AccountPage() {
       <h1 className="text-H2 text-gray-900">Account settings</h1>
       {!user.emailVerified && (
         <div className="flex flex-row items-center gap-2">
-          <h2 className="text-ButtonMain text-lg font-bold">
+          <h2 className="text-PrimaryButtonColor text-lg font-bold">
             Email not verified!
           </h2>
           <button
-            className="bg-ButtonMain rounded-lg text-white px-3 py-2.5"
+            className="bg-PrimaryColor hover:bg-PrimaryColorHover rounded-lg text-white px-3 py-2.5"
             onClick={SendVerificationEmail}
           >
             Send verification email
@@ -96,7 +107,7 @@ export default function AccountPage() {
               Name
               <input
                 name="nameImput"
-                className="border border-gray-300 dark:border-gray-600 w-96 text-base text-gray-400 dark:text-gray-500 pl-4 py-3 rounded-lg focus:outline-none bg-transparent"
+                className="border border-gray-300 dark:border-gray-600 w-96 text-base text-gray-900 dark:text-gray-500 pl-4 py-3 rounded-lg focus:outline-none bg-transparent"
                 onChange={(e) => setName(e.target.value)}
                 value={name}
               />
@@ -105,7 +116,7 @@ export default function AccountPage() {
               Email
               <input
                 name="EmailImput"
-                className="border border-gray-300 dark:border-gray-600 w-96 text-base text-gray-400 dark:text-gray-500 pl-4 py-3 rounded-lg focus:outline-none bg-transparent"
+                className="border border-gray-300 dark:border-gray-600 w-96 text-base text-gray-900 dark:text-gray-500 pl-4 py-3 rounded-lg focus:outline-none bg-transparent"
                 onChange={(e) => setEmail(e.target.value)}
                 value={email}
               />
@@ -128,12 +139,20 @@ export default function AccountPage() {
             <ImageUploader />
           </div>
         </div>
-        <button
-          className="bg-ButtonMain rounded-lg text-white px-7 py-2.5"
-          onClick={SaveUser}
-        >
-          Save
-        </button>
+        <div className="flex flex-row items-center gap-10">
+          <button
+            className="bg-PrimaryColor hover:bg-PrimaryColorHover rounded-lg text-white px-7 py-2.5"
+            onClick={SaveUser}
+          >
+            Save
+          </button>
+          <button
+            className="bg-SecondaryColor hover:bg-SecondaryColorHover rounded-lg text-white px-7 py-2.5"
+            onClick={SignOutUser}
+          >
+            Sign out
+          </button>
+        </div>
       </div>
     </div>
   );

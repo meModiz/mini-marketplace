@@ -16,7 +16,7 @@ export default function SignIn() {
     signInWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
         const user = userCredential.user;
-        router.push("/marketplace", { scroll: false });
+        router.push("/account", { scroll: false });
       })
       .catch((error) => {
         const errorMessage = error.message;
@@ -53,7 +53,7 @@ export default function SignIn() {
               Forgot password?
             </div>
             <div
-              className="bg-ButtonMain w-full h-12 flex items-center justify-center text-white rounded-lg"
+              className="bg-PrimaryColor hover:bg-PrimaryColorHover w-full h-12 flex items-center justify-center text-white rounded-lg"
               onClick={handleLogin}
             >
               Sign In

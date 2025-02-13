@@ -58,7 +58,7 @@ export default function SignIn() {
               onChange={(e) => setPassword(e.target.value)}
             />
             <div
-              className="bg-ButtonMain w-full h-12 flex items-center justify-center text-white rounded-lg"
+              className="bg-PrimaryColor hover:bg-PrimaryColorHover w-full h-12 flex items-center justify-center text-white rounded-lg"
               onClick={handleRegistration}
             >
               Sign up

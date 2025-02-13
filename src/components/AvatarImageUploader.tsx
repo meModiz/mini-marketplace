@@ -50,7 +50,7 @@ export default function AvatarImageUploader() {
         }}
       />
       <button
-        className="bg-ButtonMain rounded-lg text-white px-5 py-2.5"
+        className="bg-PrimaryColor hover:bg-PrimaryColorHover rounded-lg text-white px-5 py-2.5"
         onClick={UploadFile}
       >
         Upload

@@ -10,7 +10,10 @@ export default {
   theme: {
     extend: {
       colors: {
-        ButtonMain: "#F55266",
+        PrimaryColor: "#F55266",
+        PrimaryColorHover: "#fc7787",
+        SecondaryColor: "#262626",
+        SecondaryColorHover: "#525252",
         gray: {
           200: "#E0E5EB",
           300: "#CAD0D9",
