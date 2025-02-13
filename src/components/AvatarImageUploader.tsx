@@ -1,30 +1,22 @@
 "use client";
 import { useState } from "react";
-import { auth, storage } from "@/app/firebase";
-import { getDownloadURL, ref, uploadBytes } from "firebase/storage";
 import { updateProfile } from "firebase/auth";
+import { auth, storage } from "@/app/firebase";
+import { getDownloadURL, ref } from "firebase/storage";
+import UploadFile from "@/data/uploadImage";
+
 export default function AvatarImageUploader() {
   const [file, setFile] = useState<File | null>(null);
 
-  function UploadFile() {
+  function UpdateAvatar() {
+    const user = auth.currentUser;
+    const email = user?.email;
+
     if (!file) {
       return;
     }
 
-    if (file.type != "image/jpeg" && file.type != "image/png") {
-      return;
-    }
-
-    const user = auth.currentUser;
-    const email = user?.email;
-    const storageRef = ref(storage, `images/avatars/${email}`);
-    try {
-      uploadBytes(storageRef, file).then(() => {
-        console.log("Uploaded a blob or file!");
-      });
-    } catch (exp) {
-      console.log("unexpected error: " + exp);
-    }
+    UploadFile({ file, FullPath: `images/avatars/${email}` });
 
     getDownloadURL(ref(storage, `images/avatars/${email}`))
       .then((url) => {
@@ -39,6 +31,7 @@ export default function AvatarImageUploader() {
       });
   }
 
+  // Need to add error component
   return (
     <div className="flex flex-col items-start justify-center gap-2">
       <input
@@ -51,7 +44,7 @@ export default function AvatarImageUploader() {
       />
       <button
         className="bg-PrimaryColor hover:bg-PrimaryColorHover rounded-lg text-white px-5 py-2.5"
-        onClick={UploadFile}
+        onClick={UpdateAvatar}
       >
         Upload
       </button>
