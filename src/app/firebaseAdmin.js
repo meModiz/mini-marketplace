@@ -1,12 +1,14 @@
-import * as admin from "firebase-admin";
-import { cert } from "firebase-admin/app";
+import admin from "firebase-admin";
 
-// Prevent multiple initializations
+const serviceAccount = JSON.parse(
+  process.env.FIREBASE_ADMIN_CREDENTIALS || "{}"
+);
+
 if (!admin.apps.length) {
   admin.initializeApp({
-    credential: cert(require("../serviceAccountKey.json")), // Ensure correct path
+    credential: admin.credential.cert(serviceAccount),
+    databaseURL: `https://${serviceAccount.project_id}.firebaseio.com`,
   });
 }
 
-export const authAdmin = admin.auth();
-export const dbAdmin = admin.firestore();
+export default admin;
