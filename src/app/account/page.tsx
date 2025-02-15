@@ -31,7 +31,6 @@ export default function AccountPage() {
         getDownloadURL(ref(storage, `images/avatars/${user?.email}`))
           .then((url) => {
             setAvatarURL(url);
-            console.log(url);
           })
           .catch((error) => {});
       } else {

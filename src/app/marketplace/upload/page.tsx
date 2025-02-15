@@ -24,7 +24,7 @@ export default function UploadListingImages() {
 
   async function fetchImages(ListingID: string) {
     try {
-      const folderRef = ref(storage, `images/${ListingID}/`);
+      const folderRef = ref(storage, `images/listings/${ListingID}/`);
 
       const result = await listAll(folderRef);
 
@@ -54,7 +54,7 @@ export default function UploadListingImages() {
     }
 
     const uniqueID = uuidv4();
-    const filePath = `images/${ListingID}/${uniqueID}`;
+    const filePath = `images/listings/${ListingID}/${uniqueID}`;
     const fileRef = ref(storage, filePath);
 
     try {
@@ -72,7 +72,7 @@ export default function UploadListingImages() {
 
   function HandleImageRemove(imgURL: string) {
     const fileName = imgURL.split("%2F").pop()?.split("?")[0];
-    const delPath = ref(storage, `images/${ListingID}/${fileName}`);
+    const delPath = ref(storage, `images/listings/${ListingID}/${fileName}`);
 
     deleteObject(delPath)
       .then(() => {
@@ -90,11 +90,18 @@ export default function UploadListingImages() {
   return (
     <div className="flex flex-col px-80 py-3 gap-6">
       <div className="flex flex-col items-start gap-0">
-        <h1 className="text-H2 text-gray-900">
-          Upload images for you listing: {name}
+        <h1 className="text-H2 font-medium text-gray-900">
+          Upload images for your listing
         </h1>
-        <h2 className="text-lg text-gray-900">Price: {price}$</h2>
-        <h3 className="text-sm text-gray-900">Unique id: {ListingID}</h3>
+        <h2 className="text-lg text-gray-900">
+          Name: <span className="font-bold">{name}</span>
+        </h2>
+        <h2 className="text-lg text-gray-900">
+          Price: <span className="font-bold">{price}$</span>
+        </h2>
+        <h3 className="text-sm text-gray-900">
+          Unique id: <span className="font-bold">{ListingID}</span>
+        </h3>
       </div>
       <div className="flex flex-col items-start justify-center gap-2">
         <input

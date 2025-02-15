@@ -1,7 +1,13 @@
+export type Seller = {
+  uid: string;
+  photoURL: string;
+  displayName: string;
+};
+
 export type Listing = {
   id: string;
   name: string;
   price: number;
-  images: string[];
-  sellerUID: string;
+  seller: Seller;
+  imagesURL: string[];
 };

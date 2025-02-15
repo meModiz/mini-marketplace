@@ -30,7 +30,7 @@ export default function CreateListing() {
   return (
     <div className="flex flex-col px-80 py-3 gap-6">
       <h1 className="text-H2 text-gray-900">Create your listing</h1>
-      <div className="flex flex-col items-start">
+      <div className="flex flex-col items-start gap-3">
         <input
           name="nameInput"
           placeholder="Listing title"
