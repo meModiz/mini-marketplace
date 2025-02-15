@@ -1,36 +1,44 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🚀 Modiz Mini-marketplace
 
-## Getting Started
+Prototype of marketplace build with next.js, tailwindcss, firebase.
 
-First, run the development server:
+## 🛠️ Technical Stack:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- **Frontend:** React.js, Next.js, Tailwind CSS
+- **Backend:** Firebase
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 📌 Features
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- Sign up / Sign in
+- Account settings
+- Upload listings with name, price, images
+- View listings
+- Dark/Light modes
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 📃 Installation & Usage
 
-## Learn More
+1. Clone the repo:
 
-To learn more about Next.js, take a look at the following resources:
+   ```bash
+   git clone https://github.com/meModiz/mini-marketplace.git
+   ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+2. Install dependencies:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+   ```bash
+   pnpm install
+   ```
 
-## Deploy on Vercel
+3. Run dev server
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+   ```bash
+   pnpm dev
+   ```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### 📸 Project Screenshots
+
+<a href="./project_showcase_images/1.png"><img src="./project_showcase_images/1.png" width="300"></a>
+<a href="./project_showcase_images/2.png"><img src="./project_showcase_images/2.png" width="300"></a>
+<a href="./project_showcase_images/3.png"><img src="./project_showcase_images/3.png" width="300"></a>
+<a href="./project_showcase_images/4.png"><img src="./project_showcase_images/4.png" width="300"></a>
+<a href="./project_showcase_images/5.png"><img src="./project_showcase_images/5.png" width="300"></a>
