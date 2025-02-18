@@ -1,9 +1,7 @@
 import { Category } from "@/types/category";
-import { useRouter } from "next/navigation";
 import Image from "next/image";
 
 export default function CategoryCard({ name, label }: Category) {
-  const router = useRouter();
   return (
     <div className="flex flex-col overflow-hidden w-49 h-48 bg-transparent transform transition-transform duration-300 hover:scale-105">
       <div className="w-full flex-1 overflow-hidden">

@@ -4,14 +4,15 @@ import Image from "next/image";
 import { themeContext } from "@/components/ThemeProvider";
 import { useContext, useState } from "react";
 import Link from "next/link";
-import { getAuth, onAuthStateChanged } from "firebase/auth";
+import { onAuthStateChanged } from "firebase/auth";
 import { auth } from "@/app/firebase";
 export default function Authentication() {
   const { theme } = useContext(themeContext);
-  const [isLogged, setLogged] = useState<Boolean>(false);
+  const [isLogged, setLogged] = useState<boolean>(false);
   onAuthStateChanged(auth, (user) => {
     if (user) {
       const uid = user.uid;
+      console.log(uid); // temporary
       setLogged(true);
     } else {
       setLogged(false);

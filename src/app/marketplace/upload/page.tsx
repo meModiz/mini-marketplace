@@ -15,7 +15,6 @@ import { v4 as uuidv4 } from "uuid";
 export default function UploadListingImages() {
   const [imagesURL, setImagesURL] = useState<string[]>([]);
   const [currentFile, setCurrentFile] = useState<File | null>(null);
-  const [imageCount, setImageCount] = useState<number>(0);
   const searchParams = useSearchParams();
   const ListingID = searchParams.get("id");
   const name = searchParams.get("name");
@@ -33,7 +32,6 @@ export default function UploadListingImages() {
       );
 
       setImagesURL(urls);
-      setImageCount(result.items.length);
 
       return result.items.length;
     } catch (error) {
@@ -46,7 +44,7 @@ export default function UploadListingImages() {
     if (ListingID) {
       fetchImages(ListingID);
     }
-  }, []);
+  });
 
   async function HandleImageUpload() {
     if (!currentFile) {
@@ -78,7 +76,9 @@ export default function UploadListingImages() {
       .then(() => {
         setImagesURL((prev) => prev.filter((url) => url !== imgURL));
       })
-      .catch((error) => {});
+      .catch((error) => {
+        console.log(error);
+      });
   }
 
   function HandleSave() {

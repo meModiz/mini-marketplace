@@ -14,7 +14,7 @@ function ImageContainer({
   return (
     <div className="w-full flex-1 overflow-hidden">
       <Image
-        alt={label}
+        alt={label + "_" + id}
         src={
           imagesURL.length === 0 || imagesURL[0] === undefined
             ? "/no_image.png"

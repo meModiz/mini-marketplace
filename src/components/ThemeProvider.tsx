@@ -1,12 +1,13 @@
 "use client";
 import { createContext, useEffect, useState } from "react";
+import { ReactNode } from "react";
 
 export const themeContext = createContext({
   theme: "light",
   toggleTheme: () => {},
 });
 
-export default function ThemeProvider({ children }: { children: any }) {
+export default function ThemeProvider({ children }: { children: ReactNode }) {
   // Sometimes happens react hydration, idk how to fix that tbh =(
   const [theme, setTheme] = useState<string>("light");
   useEffect(() => {

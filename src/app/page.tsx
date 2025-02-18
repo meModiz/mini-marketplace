@@ -2,7 +2,6 @@
 
 import CategoryList from "@/components/CategoryList";
 import HeaderText from "@/components/Miscs/HeaderText";
-import TrendingListingCard from "@/components/Cards/ListingsCard";
 
 export default function Home() {
   return (

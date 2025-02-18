@@ -1,6 +1,11 @@
 "use client";
 import { usePathname } from "next/navigation";
-export default function BackgroundProvider({ children }: { children: any }) {
+import { ReactNode } from "react";
+export default function BackgroundProvider({
+  children,
+}: {
+  children: ReactNode;
+}) {
   const pathname = usePathname();
   const isMainPage = pathname === "/";
   return (

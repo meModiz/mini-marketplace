@@ -1,6 +1,6 @@
 "use client";
 
-import { useContext, useEffect, useState } from "react";
+import { useContext } from "react";
 
 import darkModeIcon from "@/../public/dark_mode.svg";
 import lightModeIcon from "@/../public/light_mode.svg";

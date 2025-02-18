@@ -32,7 +32,9 @@ export default function AccountPage() {
           .then((url) => {
             setAvatarURL(url);
           })
-          .catch((error) => {});
+          .catch((error) => {
+            console.log(error);
+          });
       } else {
         setUser(null);
       }
@@ -69,7 +71,9 @@ export default function AccountPage() {
       .then(() => {
         router.push("/signin");
       })
-      .catch((error) => {});
+      .catch((error) => {
+        console.log(error);
+      });
   }
 
   function SendVerificationEmail() {

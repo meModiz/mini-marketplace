@@ -17,6 +17,7 @@ export default function SignIn() {
     createUserWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
         const user = userCredential.user;
+        console.log(user); // temporary
         if (auth.currentUser !== null) {
           const username = email.split("@")[0];
           updateProfile(auth.currentUser, {

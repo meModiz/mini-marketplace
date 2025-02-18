@@ -2,7 +2,7 @@
 import fetchCategories from "@/data/fetchCategories";
 import { Category } from "@/types/category";
 import { useEffect, useState } from "react";
-import { usePathname, useSearchParams } from "next/navigation";
+import { useSearchParams } from "next/navigation";
 import Link from "next/link";
 import { Listing } from "@/types/listing";
 import fetchListings from "@/data/fetchListings";
