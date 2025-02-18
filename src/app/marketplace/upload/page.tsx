@@ -88,18 +88,16 @@ export default function UploadListingImages() {
   }
 
   return (
-    <div className="flex flex-col px-80 py-3 gap-6">
-      <div className="flex flex-col items-start gap-0">
-        <h1 className="text-H2 font-medium text-gray-900">
-          Upload images for your listing
-        </h1>
-        <h2 className="text-lg text-gray-900">
+    <div className="flex flex-col px-80 py-3 gap-6 h-screen bg-white dark:bg-gray-900 ">
+      <div className="flex flex-col items-start gap-0 text-gray-900 dark:text-white">
+        <h1 className="text-H2 font-medium">Upload images for your listing</h1>
+        <h2 className="text-lg">
           Name: <span className="font-bold">{name}</span>
         </h2>
-        <h2 className="text-lg text-gray-900">
+        <h2 className="text-lg">
           Price: <span className="font-bold">{price}$</span>
         </h2>
-        <h3 className="text-sm text-gray-900">
+        <h3 className="text-sm">
           Unique id: <span className="font-bold">{ListingID}</span>
         </h3>
       </div>

@@ -20,7 +20,7 @@ export default function Navbar() {
             <Link href="/">Home</Link>
           </li>
           <li>
-            <Link href="/marketplace">Marketplace</Link>
+            <Link href="/marketplace?category=all_products">Marketplace</Link>
           </li>
           <li>
             <Link href="/about">About us</Link>

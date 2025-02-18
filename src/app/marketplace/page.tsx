@@ -16,10 +16,12 @@ function CategoryButton({ name, label }: Category) {
     <Link
       href={"/marketplace?category=" + name}
       className={`flex items-center justify-center text-center border ${
-        isMainPage ? "border-gray-900" : "border-gray-200"
+        isMainPage
+          ? "border-gray-900 dark:border-white"
+          : "border-gray-200 dark:border-gray-700"
       } rounded-3xl`}
     >
-      <span className="text-sm text-gray-900 max-w-32 h-10 truncate py-2.5 px-5">
+      <span className="text-sm text-gray-900 dark:text-white max-w-32 h-10 truncate py-2.5 px-5">
         {label}
       </span>
     </Link>
@@ -51,9 +53,11 @@ export default function MainPage() {
   }, []);
 
   return (
-    <div className="flex flex-col items-start px-80 py-3 gap-6">
+    <div className="flex flex-col items-start gap-6 bg-white dark:bg-gray-900 h-screen pt-3 pl-72">
       <div className="flex flex-row items-center gap-5">
-        <h1 className="text-H2 text-gray-900">Marketplace catalog</h1>
+        <h1 className="text-H2 text-gray-900 dark:text-white">
+          Marketplace catalog
+        </h1>
         <Link
           href={"/marketplace/create"}
           className={`flex flex-row text-center bg-gray-600 hover:bg-gray-500 rounded-lg px-3 py-2`}
@@ -75,7 +79,7 @@ export default function MainPage() {
           />
         ))}
       </div>
-      <div className="flex flex-row gap-5">
+      <div className="flex flex-row gap-5 flex-wrap w-5/6">
         {listings.map((listing) => (
           <ListingCard
             key={listing.id}

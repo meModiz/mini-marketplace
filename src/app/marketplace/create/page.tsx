@@ -28,19 +28,21 @@ export default function CreateListing() {
   }
 
   return (
-    <div className="flex flex-col px-80 py-3 gap-6">
-      <h1 className="text-H2 text-gray-900">Create your listing</h1>
+    <div className="flex flex-col pl-80 h-screen bg-white dark:bg-gray-900  py-3 gap-6">
+      <h1 className="text-H2 text-gray-900 dark:text-white">
+        Create your listing
+      </h1>
       <div className="flex flex-col items-start gap-3">
         <input
           name="nameInput"
           placeholder="Listing title"
-          className="border border-gray-300 w-96 text-base text-gray-400 pl-4 py-3 rounded-lg focus:outline-none"
+          className="border border-gray-300 w-96 text-base text-gray-400 pl-4 py-3 rounded-lg focus:outline-none dark:bg-gray-900 dark:border-gray-600 dark:text-white"
           onChange={(e) => setName(e.target.value)}
         />
         <input
           name="priceInput"
           placeholder="Price of item"
-          className="border border-gray-300 w-96 text-base text-gray-400 pl-4 py-3 rounded-lg focus:outline-none"
+          className="border border-gray-300 w-96 text-base text-gray-400 pl-4 py-3 rounded-lg focus:outline-none dark:bg-gray-900 dark:border-gray-600 dark:text-white"
           onChange={(e) => setPrice(Number(e.target.value))}
         />
         <button

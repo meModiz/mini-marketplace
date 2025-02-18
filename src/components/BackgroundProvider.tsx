@@ -8,7 +8,7 @@ export default function BackgroundProvider({ children }: { children: any }) {
       className={`${
         isMainPage
           ? "bg-lightGradient dark:bg-darkGradient"
-          : "bg-white dark:bg-black"
+          : "bg-white dark:bg-gray-800"
       }`}
     >
       {children}
