@@ -2,6 +2,10 @@
 
 Prototype of marketplace build with next.js, tailwindcss, firebase.
 
+# Showcase (PC only, mobile not supported)
+
+[Mini Marketplace Showcase](https://mini-marketplace-gray.vercel.app/)
+
 ## 🛠️ Technical Stack:
 
 - **Frontend:** React.js, Next.js, Tailwind CSS

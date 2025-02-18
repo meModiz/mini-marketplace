@@ -60,7 +60,7 @@ function TextContainer({
           {seller.displayName}
         </p>
         <p className="text-xs text-gray-500 dark:text-gray-400 min-w-fit pl-6">
-          22 reviews
+          0 reviews
         </p>
       </div>
     </div>

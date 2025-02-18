@@ -1,3 +1,4 @@
+"use client";
 import CategoryCard from "@/components/Cards/CategoryCard";
 import { useEffect, useState } from "react";
 import fetchCategories from "@/data/fetchCategories";
@@ -5,7 +6,6 @@ import { Category } from "@/types/category";
 
 export default function CategoryList() {
   const [categories, setCategories] = useState<Category[]>([]);
-
   async function getCategories() {
     const data = await fetchCategories();
     setCategories(data);
