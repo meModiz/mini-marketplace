@@ -1,5 +1,5 @@
 "use client";
-import CategoryCard from "@/components/Cards/CategoryCard";
+import CategoryCard from "@/components/cards/CategoryCard";
 import { useEffect, useState } from "react";
 import fetchCategories from "@/data/fetchCategories";
 import { Category } from "@/types/category";

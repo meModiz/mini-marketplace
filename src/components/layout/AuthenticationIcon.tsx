@@ -1,7 +1,7 @@
 import authenticationLight from "@/../public/authenticationLight.svg";
 import authenticationDark from "@/../public/authenticationDark.svg";
 import Image from "next/image";
-import { themeContext } from "@/components/ThemeProvider";
+import { themeContext } from "@/components/layout/ThemeProvider";
 import { useContext, useState } from "react";
 import Link from "next/link";
 import { onAuthStateChanged } from "firebase/auth";

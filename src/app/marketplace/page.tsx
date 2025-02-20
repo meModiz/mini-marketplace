@@ -6,7 +6,7 @@ import { useSearchParams } from "next/navigation";
 import Link from "next/link";
 import { Listing } from "@/types/listing";
 import fetchListings from "@/data/fetchListings";
-import ListingCard from "@/components/Cards/ListingsCard";
+import ListingCard from "@/components/cards/ListingsCard";
 
 function CategoryButton({ name, label }: Category) {
   const searchParams = useSearchParams();

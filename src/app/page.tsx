@@ -1,7 +1,7 @@
 "use client";
 
-import CategoryList from "@/components/CategoryList";
-import HeaderText from "@/components/Miscs/HeaderText";
+import CategoryList from "@/components/common/CategoryList";
+import HeaderText from "@/components/common/HeaderText";
 
 export default function Home() {
   return (

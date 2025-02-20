@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { themeContext } from "@/components/ThemeProvider";
+import { themeContext } from "@/components/layout/ThemeProvider";
 import { useContext } from "react";
 
 export default function Logo() {

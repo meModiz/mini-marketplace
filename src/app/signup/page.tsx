@@ -1,6 +1,6 @@
 "use client";
-import { FooterAuth, AuthHeadings } from "@/components/AuthComponents";
-import Logo from "@/components/Miscs/Logo";
+import { FooterAuth, AuthHeadings } from "@/components/auth/AuthComponents";
+import Logo from "@/components/common/Logo";
 import Image from "next/image";
 import { auth } from "@/app/firebase";
 import { createUserWithEmailAndPassword, updateProfile } from "firebase/auth";

@@ -1,9 +1,9 @@
 "use client";
 import Link from "next/link";
-import ThemeToggle from "@/components/NavigationBar/ThemeToggler";
-import Authentication from "@/components/NavigationBar/AuthenticationIcon";
+import ThemeToggle from "@/components/layout/ThemeToggler";
+import Authentication from "@/components/layout/AuthenticationIcon";
 import { usePathname } from "next/navigation";
-import Logo from "../Miscs/Logo";
+import Logo from "../common/Logo";
 
 export default function Navbar() {
   const pathname = usePathname();

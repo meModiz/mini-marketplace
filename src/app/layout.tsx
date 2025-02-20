@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import Navbar from "../components/NavigationBar/Navbar";
+import Navbar from "../components/layout/Navbar";
 import React from "react";
-import ThemeProvider from "@/components/ThemeProvider";
+import ThemeProvider from "@/components/layout/ThemeProvider";
 import BackgroundProvider from "@/components/BackgroundProvider";
 import { Suspense } from "react";
 

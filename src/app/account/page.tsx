@@ -1,6 +1,6 @@
 "use client";
 import { auth, storage } from "@/app/firebase";
-import ImageUploader from "@/components/AvatarImageUploader";
+import ImageUploader from "@/components/auth/AvatarImageUploader";
 import {
   onAuthStateChanged,
   sendEmailVerification,
