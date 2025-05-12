@@ -1,3 +1,5 @@
+# 🚧 This project is a work in progress — some features may still be incomplete or buggy.
+
 # 🚀 Modiz Mini-marketplace
 
 Prototype of marketplace build with next.js, tailwindcss, firebase.
